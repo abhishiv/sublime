@@ -1,0 +1,66 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source.js"
+		}
+	],
+	"auto_find_in_selection": true,
+	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
+	"draw_minimap_border": true,
+	"fade_fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules",
+		".idea",
+		"tmp",
+		"dist",
+		".je-project-settings",
+		"build"
+	],
+	"font_size": 18,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"JavaScript Enhancements",
+		"Vintage"
+	],
+	"margin": 8,
+	"show_full_path": false,
+	"skin": "ayu/ayu dark",
+	"tab_size": 2,
+	"theme": "ayu-mirage.sublime-theme",
+	"theme_accent_purple": true,
+	"theme_bar": true,
+	"theme_bar_shadow_hidden": true,
+	"theme_dropdown_atomized": true,
+	"theme_find_panel_atomized": true,
+	"theme_sidebar_disclosure": true,
+	"theme_sidebar_folder_mono": true,
+	"theme_sidebar_indent_sm": true,
+	"theme_statusbar_colored": true,
+	"theme_statusbar_size_md": true,
+	"theme_tab_highlight_text_only": true,
+	"theme_tab_selected_filled": true,
+	"theme_tab_size_md": true,
+	"theme_tabset_line_visible": true,
+	"theme_unified": true,
+	"translate_tabs_to_spaces": true,
+	"ui_font_size_small": false,
+	"ui_font_source_code_pro": true,
+	"ui_native_titlebar": false,
+	"ui_separator": true,
+	"ui_wide_scrollbars": true,
+	"word_wrap": true
+}

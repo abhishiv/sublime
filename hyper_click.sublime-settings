@@ -1,0 +1,154 @@
+{
+  "supported_syntaxes": {
+    "js": [
+      "JavaScript",
+      "ecmascript.sublime-syntax",
+      "JavaScript.sublime-syntax",
+      "JavaScript (Babel).sublime-syntax",
+      "JavaScriptNext.tmLanguage",
+      "React.sublime-syntax",
+      "TypeScriptReact.tmLanguage",
+      "TypeScript.tmLanguage"
+    ],
+    "sass": [
+      "SCSS.tmLanguage",
+      "Sass.tmLanguage"
+    ],
+    "less": [
+      "LESS.tmLanguage"
+    ],
+    "php": [
+      "PHP.sublime-syntax",
+      "PHP Source.sublime-syntax"
+    ],
+    "stylus": [
+      "Stylus.tmLanguage"
+    ],
+    "html": [
+      "HTML.sublime-syntax"
+    ],
+    "jstl": [
+      "jstl.tmLanguage"
+    ],
+    "css": [
+      "CSS.sublime-syntax",
+      "PostCSS.tmLanguage"
+    ],
+    "pug": [
+      "Pug.tmLanguage"
+    ],
+    "sugarss": [
+      "Sss.tmLanguage",
+      "SugarSS.tmLanguage"
+    ],
+    "sugarml": [
+      "SugarML.tmLanguage"
+    ],
+    "nunjucks": [
+      "Nunjucks.tmLanguage"
+    ],
+    "jinja2": [
+      "Jinja2.tmLanguage"
+    ],
+    "twig": [
+      "HTML (Twig).tmLanguage",
+      "Craft-Twig.tmLanguage"
+    ]
+  },
+  "import_line_regex": {
+    "js": [
+      "^import\\s+['\"](.+)['\"];?$",
+      ".*from\\s+['\"](.+)['\"];?$",
+      ".*require\\(['\"](.+?)['\"]\\).*"
+    ],
+    "sass": [
+      "^@import\\s+['\"](.+)['\"];?$"
+    ],
+    "less": [
+      "^@import\\s+\\(?.*\\)?\\s*['\"](.+)['\"];?$"
+    ],
+    "php": [
+      "^import\\(['\"](.+)['\"]\\);?$",
+      "^import_once\\(['\"](.+)['\"]\\);?$",
+      "^require\\(['\"](.+)['\"]\\);?$",
+      "^require_once\\(['\"](.+)['\"]\\);?$"
+    ],
+    "stylus": [
+      "^@import\\s+['\"](.+)['\"];?$"
+    ],
+    "html": [
+      ".*?<link\\s+rel=\"import\"\\s+href=['\"](.+)['\"]/?>.*?"
+    ],
+    "jstl": [
+      "(<([\\w-]*)\\:([\\w-]*))",
+    ],
+    "css": [
+      "^@import\\s+['\"](.+)['\"].*?;$",
+      "^@import\\s+url\\(['\"](.+)['\"]\\).*?;$"
+    ],
+    "pug": [
+      "^include\\s+(.+)$",
+      "^extends\\s+(.+)$"
+    ],
+    "sugarss": [
+      "^@import\\s+['\"](.+)['\"]$"
+    ],
+    "sugarml": [
+      "^include\\(src=['\"]\/?(.+)['\"]\\)$",
+      "^extends\\(src=['\"]\/?(.+)['\"]\\)$",
+    ],
+    "nunjucks": [
+      "^{%\\s+extends\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+include\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+import\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+from\\s+['\"](.+)['\"]\\s+import.*?%}$"
+    ],
+    "jinja2": [
+      "^{%\\s+extends\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+include\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+import\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+from\\s+['\"](.+)['\"]\\s+import.*?%}$"
+    ],
+    "twig": [
+      "^{%\\s+extends\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+include\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+import\\s+['\"](.+)['\"].*?%}$",
+      "^{%\\s+from\\s+['\"](.+)['\"]\\s+import.*?%}$",
+      "^{%\\s+embed\\s+['\"](.+)['\"].*?%}$",
+    ]
+  },
+  "valid_extensions": {
+    "js": ["js", "jsx", "ts", "tsx"],
+    "sass": ["scss", "sass"],
+    "less": ["less"],
+    "php": ["php"],
+    "stylus": ["styl", "stylus"],
+    "html": ["html"],
+    "jstl": ["jsp", "tag"],
+    "css": ["css", "pcss", "postcss"],
+    "pug": ["pug", "jade"],
+    "sugarss": ["sss"],
+    "sugarml": ["sgr"],
+    "nunjucks": ["njk", "nunjucks", "njs", "html"],
+    "jinja2": ["j2"],
+    "twig": ["twig"]
+  },
+  "default_filenames": {
+    "js": ["index"]
+  },
+  "vendor_dirs": {
+    "js": ["node_modules"],
+    "html": ["node_modules", "bower_components"],
+    "jstl": ["WEB-INF"]
+  },
+  "lookup_paths": {
+    "js": [],
+    "jstl": [
+      "taglib *prefix ?= ?[\"'](.*)[\"'] *tagdir ?= ?[\"'](.*)[\"']",
+      "xmlns:(\\w*)=[\"']urn:jsptagdir:(.*?)[\"']"
+    ]
+  },
+  "annotation_found_text": "➜",
+  "annotation_not_found_text": "✘",
+  "annotations_enabled": true
+}

@@ -1,0 +1,10 @@
+[
+  { "keys": ["super+up"], "command": "expand_region" },
+  {
+    "keys": ["super+down"],
+    "command": "expand_region",
+    "args": {"undo": true},
+    "context": [{ "key": "expand_region_soft_undo" }]
+  },
+
+]

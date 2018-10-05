@@ -1,0 +1,26 @@
+{
+  // Show dynamic colors (colors set by the shell) in the terminal view. This
+  // causes a minor increase in terminal response time so try disabling it if
+  // you are experiencing any problems.
+  "terminal_view_show_colors": true,
+
+  // Number of lines to buffer in history for scrollback.
+  "terminal_view_scroll_history": 1000000000,
+
+  // Percentage of page that is scrolled (1.0 corresponds to an entire page
+  // scroll).
+  "terminal_view_scroll_ratio": 1.0,
+
+  // Amount of character margin on the right-hand side of the terminal view.
+  // Tweak this if you want to avoid the horizontal scrollbar showing in the
+  // view. Defaults to a margin of 3 characters as this avoid the horizontal
+  // scrollbar in the default theme.
+  "terminal_view_right_margin": 3,
+
+  // Same as above but applies to the bottom of the view instead. Defaults to 0
+  // lines of margin,
+  "terminal_view_bottom_margin": 0,
+
+  // Enable/disable debug printing to the console.
+  "terminal_view_print_debug": true,
+}

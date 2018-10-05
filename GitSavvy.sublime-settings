@@ -1,0 +1,412 @@
+{
+    /*
+        Change this to `false` if you don't wish to be prompted when
+        discarding files.
+     */
+    "prompt_before_destructive_action": true,
+
+    /*
+        Uncomment the setting below to explicitly set which git binary
+        to use.  An empty string will search PATH for "git".  The setting may
+        be a direct string to a git binary, e.g.:
+
+            "git_path": "/usr/bin/git",
+
+        Or it may be a dictionary keyed off what sublime.platform() returns,
+        so it may be customized on a per-platform basis.  e.g.:
+
+            "git_path": {
+                "default": "",
+                "windows": "C:/Program Files/Git/cmd/git.exe"
+            },
+     */
+    "git_path": "",
+
+    /*
+        Change this to `true` when doing dev work on GitSavvy.
+     */
+    "dev_mode": false,
+
+    /*
+        A list of tags (subsystems) to filter the output of debug.trace().
+        Only takes its effect when "dev_mode" is set to `true`.
+     */
+    "dev_trace": [
+        "debug",
+        "reload"
+    ],
+
+    /*
+        Enter your github API key in the field below.  To interact with
+        a GitHub Enterprise instance, add a field with the FQDN as the key
+        and the API key as the value.
+     */
+    "api_tokens": {
+        // "github.com": "ADD YOUR GITHUB TOKEN HERE"
+        // "gitlab.com": "ADD YOUR GITLAB TOKEN HERE"
+    },
+
+    /*
+    maximum number of items per page when requesting from github
+    */
+    "github_per_page_max" : 100,
+
+    /*
+    maximum number of items per page when requesting from gitlab
+    */
+    "gitlab_per_page_max" : 100,
+
+    /*
+        Change this to "full" to display a full diff for the current commit
+        when writing a commit message.
+
+        Change this to "stat" to display a diff stat for the current commit
+        when writing a commit message.
+
+        Change this to `false` to disable.
+     */
+    "show_commit_diff": "stat",
+
+    /*
+        Change this to `true` to scroll to the first hunk automatically when
+        you open the inline-diff view.
+     */
+    "inline_diff_auto_scroll": false,
+
+    "colors": {
+        /*
+            Colors used by the inline-diff view to display changes.
+         */
+        "inline_diff": {
+            "add_foreground": "#F9F9F4",
+            "add_background": "#37A832",
+            "add_foreground_bold": "#F9F9F4",
+            "add_background_bold": "#287020",
+            "remove_foreground": "#F9F9F4",
+            "remove_background": "#A83732",
+            "remove_foreground_bold": "#F9F9F4",
+            "remove_background_bold": "#702820"
+        }
+    },
+
+    /*
+        Change this to `true` when you would like inline diff to
+        ignore EOL whitespace changes.
+        See details in https://github.com/divmain/GitSavvy/issues/177
+     */
+    "inline_diff_ignore_eol_whitespaces": false,
+
+    /*
+        Add entries to this array (e.g. "pull" or "push") if you'd like the
+        output of these Git commands to always be shown in a panel.
+     */
+    "show_panel_for": [],
+
+    /*
+        Add entries to this array (e.g. "pull" or "push") if you'd like any
+        open panel to be closed at the beginning of the operation.
+     */
+    "close_panel_for": [],
+
+    /*
+        Whether git and githook output is logged live
+        If false, results are shown after execution.
+    */
+    "live_panel_output": false,
+
+    /*
+        Command will exit if on the timeout if the timeout reached.
+        You may want to increase this if you have a slow disk or a very
+        large repository. If you think there is something GitSavvy can do
+        to prevent this long running git command, open an issue.
+    */
+    "live_panel_output_timeout": 10000,
+
+    /*
+        Use the Sublime configured syntax for COMMIT_EDITMSG rather than
+        the custom bundled syntax that comes with GitSavvy.
+    */
+
+    "use_syntax_for_commit_editmsg": false,
+
+    /*
+        https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Commit-Guidelines
+        Add a distinct style guide for the commit messages:
+
+        First line should be max 50 characters
+        Second line should be empty
+        Any subsequent lines should be max 80 characters
+
+        It will use 'invalid.deprecated.line-too-long.git-commit' scope by default.
+        The warning is will be outlined instead of fully marked
+    */
+    "pedantic_commit": true,
+    "pedantic_commit_ruler": true,
+    "pedantic_commit_first_line_length": 50,
+    "pedantic_commit_message_line_length": 80,
+    "pedantic_commit_warning_length": 20,
+
+    /*
+        Change this to `false` to suppress the input in the panel output.
+     */
+    "show_input_in_output": true,
+
+    /*
+        Change this to `true` to print the stdin in the panel output.
+     */
+    "show_stdin_in_output": false,
+
+    /*
+        Change this to `false` to suppress the elapsed time in the panel output.
+     */
+    "show_time_elapsed_in_output": true,
+
+    /*
+        Change this to `false` to suppress Git status in ST3 status bar.
+     */
+    "git_status_in_status_bar": false,
+
+    /*
+        When entering a tag message, this will be used if the message is empty.
+        The replacement value "{tag_name}" is optional, but recommended.
+     */
+    "default_tag_message": "Tag {tag_name}",
+
+    /*
+        The filename for extra customized info to be displayed after the default
+        COMMIT_HELP_TEXT, such as commit message rules/tips/conventions.
+        Place this file at the root of the repo, and it should be commited to the
+        repo as well.
+        The file name defaults to `.commit_help`.
+        If this file is not presented, the functionality is totally ignored.
+     */
+    "commit_help_extra_file": ".commit_help",
+
+    /*
+        For each command specified, always include the command line flags
+        indicated in the global_flags hash.
+     */
+    "global_flags": {
+        // --no-columns is not supported in Git versions <1.7.11.  If Git is configured
+        //   to use columns globally, --no-columns should be added here.
+        // "branch": ["--no-columns"]
+    },
+
+    /*
+    Prints branches sorted by recent commit (works with git 2.7.0+)
+    https://www.kernel.org/pub/software/scm/git/docs/git-branch.html
+    Change this to `true` to sort branches by recent.
+    Change this to `false` to sort branches by alphanumeric.
+     */
+    "sort_by_recent_in_branch_dashboard": false,
+
+    /*
+        Set this to `true` to display remotes in the branch dashboard by default.
+     */
+    "show_remotes_in_branch_dashboard": false,
+
+    /*
+        Set this to `true` to display remotes in the tags dashboard by default.
+     */
+    "show_remotes_in_tags_dashboard": false,
+
+    /*
+        Limit the number of tags listed in the tags dashboard.
+    */
+    "max_items_in_tags_dashboard": -1,
+
+    /*
+        When set to `true`, GitSavvy will offer to set the upstream on `git: push`
+        when tracking branch is not configured.
+     */
+    "prompt_for_tracking_branch": true,
+
+    /*
+        When set to `true`, GitSavvy will automatically display more info about the
+        current commit in a output panel.
+     */
+    "log_show_more_commit_info": true,
+
+    /*
+        Diffstat look like
+        core/commands/blame.py     | 13 +++++--------
+        core/commands/log.py       |  9 +++------
+        core/git_mixins/history.py |  8 ++------
+        3 files changed, 10 insertions(+), 20 deletions(-)
+
+        Set to `false` if don't want to show this when view a commit or diff.
+     */
+    "show_diffstat": true,
+
+
+    /*
+        When set to `true`, GitSavvy will automatically display more info about the
+        current commit in a output panel.  When set to `false`, this function must
+        be invoked manually.
+     */
+    "graph_show_more_commit_info": true,
+
+
+    /*
+        When set to `true,`, GitSavvy will display the full diff of the current
+        commit in the output panel.
+    */
+    "show_full_commit_info": false,
+
+    /*
+        Update the desired graph arguments for a customized experience.
+        Do not add "--all" in this setting, it is added in graph all branches
+
+        NOTE: Changes you make may break in-view functionality, so use with caution.
+     */
+    // "git_graph_args": ["log", "--oneline", "--graph", "--decorate"],
+    "git_graph_args": ["log", "--pretty=format:%h%d %s (%ar) <%an>", "--graph"],
+
+    /*
+        When set to `true`, GitSavvy will follow file renames when running git log/graph
+    */
+    "log_follow_rename": false,
+
+    /*
+        When set to `true`, GitSavvy will follow file renames in blame view
+    */
+    "blame_follow_rename": false,
+
+    /*
+        Set it to "file", "commit" or "all_commits" to specify the default detection
+        method for the blame view.
+    */
+
+    "blame_detect_move_or_copy_within": "file",
+
+    /*
+        When set to `true`, GitSavvy will prompt for confirmation when closing
+        the commit message view. Ignored when "commit_on_close" is true.
+    */
+    "prompt_on_abort_commit": true,
+
+    /*
+        When set to `true`, GitSavvy will display git-flow integration commands.
+    */
+    "show_git_flow_commands": false,
+
+    /*
+        When set to `true`, GitSavvy will include the `--log` flag when performing
+        merges.  This will mean commit summaries will be included in the merge commit
+        message.
+    */
+    "merge_log": true,
+
+
+    /*
+        The default base for the rebase dashboard.
+    */
+    "rebase_default_base_ref": "",
+
+    /*
+        When set to `true`, rebase dashboard uses preserve-merges mode when opened.
+    */
+    "rebase_preserve_merges": false,
+
+    /*
+        When set to `true`, GitSavvy will prompt for confirmation before actually
+        performing a `git push --force` operation.
+     */
+    "confirm_force_push": true,
+
+    /*
+        When set to `true`, closing the commit message window via keyboard will result
+        in a commit action being taken, except in cases where the message is empty.
+        The same is also true for amending commits.
+     */
+    "commit_on_close": false,
+
+    /*
+        This encoding will be used whenever Git's output cannot be correctly parsed
+        as UTF-8.  Modify this value if you regularly with files and Git history
+        with a different text encoding.
+
+        Example:
+            "fallback_encoding": "gbk"
+     */
+    "fallback_encoding": "windows-1252",
+
+    /*
+        This setting should only be set to true in the following conditions:
+
+          - you have installed the "Codecs33" package from Package Control
+          - you are running Linux or OS X
+          - you would like to use non-supported codecs like "gbk" for the
+            `fallback_encoding` value
+     */
+    "load_additional_codecs": false,
+
+    /*
+        Set this value to true if you'd like GitSavvy to automatically attempt
+        to decode using the `fallback_encoding` value, without prompting.
+     */
+    "silent_fallback": false,
+
+    /*
+        GitSavvy allows you to press `Tab` to cycle from one dashboard interface
+        to the next.  This setting defines the order of that cycle.  The following
+        are valid entries, and can be included in your preferred order:
+
+            status
+            branch
+            rebase
+            tags
+            graph
+
+     */
+    "tab_order": [
+        "status",
+        "branch",
+        "rebase",
+        "tags",
+        "graph"
+    ],
+
+    /*
+        Set this value to a valid git reset mode (e.g. --hard, --soft) to skip
+        reset mode prompt and always use that reset mode.
+     */
+    "use_reset_mode": null,
+
+    /*
+        By default, GitSavvy allows you attach arbitrary text meta-data to the
+        branches that you track locally.  If, however, you experience performance
+        problems because of this, feel free to turn this setting off, and the
+        descriptions will not be displayed.
+     */
+    "enable_branch_descriptions": true,
+
+    /*
+        When set to `true`, you can navigate the dashboards by using arrow keys.
+     */
+    "arrow_keys_navigation": false,
+
+    /*
+        When set to `true`, GitSavvy will become Vintagoues friendly.
+        You might need to restart Sublime in order to get this working.
+     */
+    "vintageous_friendly": false,
+
+    /*
+        When set to `true`, all views will start in INSERT mode.
+        Ignored if `vintageous_friendly` is `false`.
+     */
+    "vintageous_enter_insert_mode": false,
+
+    /*
+        When set to `true`, all views will hide their help menu when rendering.
+        You can still toggle the help menu by pressing `?`.
+     */
+    "hide_help_menu": false,
+
+    /*
+        When set to `true`, no views will receive the prompt asking to initialize
+        Git in the current view's directory when not found.
+     */
+    "disable_git_init_prompt": false
+}
